@@ -1,10 +1,13 @@
 package com.effortguy.houseutils.policy;
 
 import lombok.AllArgsConstructor;
+import org.springframework.lang.Nullable;
 
 @AllArgsConstructor
 public class BrokerageRule {
     private Double brokeragePercent;
+
+    @Nullable
     private Long limitAmount;
 
     public Long calcMaxBrokerage(Long price) {
